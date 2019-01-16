@@ -15,8 +15,8 @@ BUILD_DIR=$1
 arrow "Installing driver config"
 cp simba.snowflake.ini "${BUILD_DIR}/.apt/usr/lib/snowflake/odbc/lib/simba.snowflake.ini" | indent
 mkdir -p "${BUILD_DIR}/.apt/usr/lib/snowflake/odbc/conf" | indent
-cp odbcinst.ini "${BUILD_DIR}/.apt/usr/lib/snowflake/odbc/conf/odbcinst.ini" | indent
+cp odbcinst.ini "${BUILD_DIR}/.apt/etc/odbcinst.ini" | indent
 
-arrow "Adding profile.d script"
-mkdir -p "${BUILD_DIR}/.profile.d" | indent
-cp .profile.d/configure-snowflake-odbc.sh "${BUILD_DIR}/.profile.d" | indent
+#arrow "Adding profile.d script"
+#mkdir -p "${BUILD_DIR}/.profile.d" | indent
+#cp .profile.d/configure-snowflake-odbc.sh "${BUILD_DIR}/.profile.d" | indent
